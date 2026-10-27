@@ -26,26 +26,33 @@ const tagDictionary = {
     'CozyVampireSimulator': "Cozy-Vampire-Simulator"
 }
 const YourMagicChapterPathIdentifier = "your-magic-chapter"
+const YourMagicProloguePathIdentifier = "your-magic-prologue"
+const YourMagicInterludePathIdentifier = "your-magic-interlude"
 
-const isYourMagicPage = path.includes(tagDictionary['YourMagicChapters']);
-    const isYourMagicChapterPage = path.includes(YourMagicChapterPathIdentifier);
-    const isChronologicallyOrdered = path.includes("chrono");
+const isYourMagicPage = path.toLowerCase().includes(tagDictionary['YourMagicChapters'].toLowerCase());
+    const isYourMagicChapterPage = path.toLowerCase().includes(YourMagicChapterPathIdentifier) || path.toLowerCase().includes(YourMagicProloguePathIdentifier) || path.toLowerCase().includes(YourMagicInterludePathIdentifier);
+    const isChronologicallyOrdered = path.toLowerCase().includes("chrono");
 
-const isArtPage = path.includes(tagDictionary['Art']);
-    const isSketchPage = path.includes(tagDictionary['Sketch']);
-    const isIllustrationPage = path.includes(tagDictionary['Illustration']);
+const isArtPage = path.toLowerCase().includes(tagDictionary['Art'].toLowerCase());
+    const isSketchPage = path.toLowerCase().includes(tagDictionary['Sketch'].toLowerCase());
+    const isIllustrationPage = path.toLowerCase().includes(tagDictionary['Illustration'].toLowerCase());
 
-const isMajiLydeLabPage = path.includes(tagDictionary['MajiLydeLab']);
-    const isENTrITIESPage = path.includes(tagDictionary['ENTrITIES']);
-    const isCozyVampireSimulator = path.includes(tagDictionary['CozyVampireSimulator']);
-    const isChickenGamePage = path.includes(tagDictionary['ChickenGame']);
+const isMajiLydeLabPage = path.toLowerCase().includes(tagDictionary['MajiLydeLab'].toLowerCase());
+    const isENTrITIESPage = path.toLowerCase().includes(tagDictionary['ENTrITIES'].toLowerCase());
+    const isCozyVampireSimulator = path.toLowerCase().includes(tagDictionary['CozyVampireSimulator'].toLowerCase());
+    const isChickenGamePage = path.toLowerCase().includes(tagDictionary['ChickenGame'].toLowerCase());
 
 const allChaptersURL = "/tagged/MajiLyde--Your-Magic";
 
 
 function formatSmolSupbageTitle(){
     document.querySelectorAll(smolSubpageTitleSelector).forEach(function(el) {
-        el.textContent = el.textContent.replace(/--/g, ' :: ').replace(/-/g, ' ').replace(/ :: /g, ' - ');
+        el.textContent = el.textContent
+            .replace(/--/g, ' :: ')
+            .replace(/-/g, ' ')
+            .replace(/ :: /g, ' - ')
+            .replace(/(^|\s)\p{L}/gu, match => match.toUpperCase())
+            .replace(/lyde/gi, 'Lyde');;
     });
 }
 
