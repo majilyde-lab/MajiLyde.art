@@ -361,6 +361,9 @@ a:hover{
             text-decoration: none;
         }
     
+    .tag-MajiLyde--Your-Magic .npf_row {
+        margin-left: 0;
+    }
     .tag-MajiLyde--Your-Magic footer.post-footer {
         margin-top: -50px;
     }
