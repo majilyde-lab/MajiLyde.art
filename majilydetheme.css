@@ -276,7 +276,7 @@ a:hover{
     display: none;
 }
 
-.majilyde-smol-subpage #page > div.header-wrapper {
+.majilyde-smol-subpage #page > div.header-wrapper:not(#majilydeyourmagicheaderwrapper) {
   display: none !important;
 }
 
@@ -289,6 +289,31 @@ a:hover{
     background-color: var(--majilyde-textbox-background);
     box-shadow: 0px 2px 13px 1px var(--majilyde-highlight-colour);    
 }
+    .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header {
+        background-color: transparent;
+        box-shadow: none;
+    }
+        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-tag-title {
+            color: transparent;
+        }
+
+        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return {
+            background-color: var(--majilyde-background-colour);
+            padding: 2px 5px 5px 5px;
+            border-radius: 5px;
+        }
+        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item {
+            background-color: var(--majilyde-background-colour);
+            padding: 5px 7px 10px 7px;
+            border-radius: 5px;
+        }
+            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return:hover,
+            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item:hover {
+                box-shadow: 0px 0px 10px 3px var(--majilyde-highlight-colour), inset 0 0 10px 2px #904CC4;
+                border: 1px solid var(--majilyde-highlight-colour);
+                border-radius: 5px;
+            }
+
     .majilyde-smol-subpage-header-elements {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
@@ -333,6 +358,10 @@ a:hover{
 .majilyde-smol-subpage #posts {
     margin-top: 70px;
 }
+    .majilyde-smol-subpage.tag-MajiLyde--Your-Magic #posts {
+        margin-top: 0;
+    }
+
 
 /* || YOUR MAGIC CHAPTERS */
 
