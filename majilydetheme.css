@@ -104,11 +104,11 @@ a {
         top: 0 !important;
     }
 
-#header > .header-image-wrapper .header-image {
-    background-size: contain;         
+.majilyde-blog-header > .header-image-wrapper .header-image {
+    background-size: contain !important;         
 }
 
-#header > div.header-image-wrapper > a {
+.majilyde-blog-header > div.header-image-wrapper > a {
     background-size: cover;
     background-position: center;
     display: block;
