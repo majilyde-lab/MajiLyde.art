@@ -302,13 +302,13 @@ a:hover{
             }
 
             .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return {
-                background-color: var(--majilyde-background-colour);
+                background-color: var(--majilyde-textbox-background);
                 padding: 2px 5px 5px 5px;
                 margin: 10px;
                 border-radius: 5px;
             }
             .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item {
-                background-color: var(--majilyde-background-colour);
+                background-color: var(--majilyde-textbox-background);
                 padding: 5px 7px 10px 7px;
                 margin: 10px 10px 10px 0px;
                 border-radius: 5px;
