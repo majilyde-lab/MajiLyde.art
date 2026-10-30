@@ -67,6 +67,7 @@ function setUpHeaderButtons() {
         }
     }
     
+    const YourMagicHeader = document.getElementById('majilydeyourmagicheaderwrapper');
     const YourMagicNavigation = document.getElementById('majiLydeYourmagicNavigation');
     const YourMagicNavigationPhone = document.getElementById('majiLydeYourmagicNavigationPhone');
     const ArtNavigation = document.getElementById('majiLydeArtNavigation');
@@ -74,7 +75,8 @@ function setUpHeaderButtons() {
     const MajiLydeLabNavigation =  document.getElementById('majiLydeGameDevNavigation');
     const MajiLydeLabNavigationPhone =  document.getElementById('majiLydeGameDevNavigationPhone');
 
-    if(isYourMagicPage && YourMagicNavigation && YourMagicNavigationPhone){
+    if(isYourMagicPage && YourMagicHeader && YourMagicNavigation && YourMagicNavigationPhone){
+        YourMagicHeader.classList.remove('majilyde-thingie-hidden');
         YourMagicNavigation.classList.remove('majilyde-thingie-hidden');
         YourMagicNavigationPhone.classList.remove('majilyde-thingie-hidden');
         const chronoButton = document.getElementById('sortByChrono');

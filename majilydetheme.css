@@ -293,26 +293,32 @@ a:hover{
         background-color: transparent;
         box-shadow: none;
     }
-        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-tag-title {
-            color: transparent;
+        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header-elements {
+            grid-template-columns: 1fr 0fr 1fr;
         }
+            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-tag-title {
+                color: transparent;
+                font-size: 0px;
+            }
 
-        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return {
-            background-color: var(--majilyde-background-colour);
-            padding: 2px 5px 5px 5px;
-            border-radius: 5px;
-        }
-        .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item {
-            background-color: var(--majilyde-background-colour);
-            padding: 5px 7px 10px 7px;
-            border-radius: 5px;
-        }
-            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return:hover,
-            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item:hover {
-                box-shadow: 0px 0px 10px 3px var(--majilyde-highlight-colour), inset 0 0 10px 2px #904CC4;
-                border: 1px solid var(--majilyde-highlight-colour);
+            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return {
+                background-color: var(--majilyde-background-colour);
+                padding: 2px 5px 5px 5px;
+                margin: 10px;
                 border-radius: 5px;
             }
+            .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item {
+                background-color: var(--majilyde-background-colour);
+                padding: 5px 7px 10px 7px;
+                margin: 10px 10px 10px 0px;
+                border-radius: 5px;
+            }
+                .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-page-return:hover,
+                .tag-MajiLyde--Your-Magic .majilyde-smol-subpage-header .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item:hover {
+                    box-shadow: 0px 0px 10px 3px var(--majilyde-highlight-colour), inset 0 0 10px 2px #904CC4;
+                    border: 1px solid var(--majilyde-highlight-colour);
+                    border-radius: 5px;
+                }
 
     .majilyde-smol-subpage-header-elements {
         display: grid;
@@ -532,24 +538,21 @@ a:hover{
             margin: 3px 3px;
         }
 
-    .majilyde-smol-subpage-header-navigation {
+    .majilyde-smol-subpage:not(.tag-MajiLyde--Your-Magic) .majilyde-smol-subpage-header-navigation {
         display: none;
     }
-    .majilyde-smol-subpage-header-navigation-phone {
+    .majilyde-smol-subpage:not(.tag-MajiLyde--Your-Magic) .majilyde-smol-subpage-header-navigation-phone {
         display: block;
     }
     .majilyde-smol-subpage-header-navigation .majilyde-smol-subpage-header-nav-item {
         margin-right: 5px;
     }
 
-    .majilyde-smol-subpage #posts {
+    .majilyde-smol-subpage:not(.tag-MajiLyde--Your-Magic) .majilyde-smol-subpage #posts {
         margin-top: 80px;
     }
         .tag-MajiLydeLab.majilyde-smol-subpage #posts {
             margin-top: 115px;
-        }
-        .tag-MajiLyde--Your-Magic.majilyde-smol-subpage #posts {
-            margin-top: 85px;
         }
 
     .post-content .body-text p {
